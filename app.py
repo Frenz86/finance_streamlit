@@ -20,16 +20,15 @@ def main():
     title = st.empty()
     st.sidebar.title("Options")
 
-    '''
-    st.markdown("""
-    <style>
-    body {
-        color: #fff;
-        background-color: #0A3648;
-    }
-    </style>
-    """, unsafe_allow_html=True) #071433   0A3648
-    '''
+  
+    #st.markdown("""
+    #<style>
+    #body {
+    #    color: #fff;
+    #    background-color: #0A3648;
+    #}
+    #</style>
+    #""", unsafe_allow_html=True) #071433   0A3648
 
     def label(symbol):
         a = components.loc[symbol]
