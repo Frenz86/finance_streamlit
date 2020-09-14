@@ -20,7 +20,7 @@ def main():
     title = st.empty()
     st.sidebar.title("Options")
 
-
+    '''
     st.markdown("""
     <style>
     body {
@@ -29,7 +29,7 @@ def main():
     }
     </style>
     """, unsafe_allow_html=True) #071433   0A3648
-
+    '''
 
     def label(symbol):
         a = components.loc[symbol]
@@ -91,8 +91,8 @@ def main():
         st.subheader('Stadistic')
         st.table(data2.describe())
 
-    if st.sidebar.checkbox('View quotes'):
-        st.subheader(f'{asset} historical data', True)
+    if st.sidebar.checkbox('View quotes', True):
+        st.subheader(f'{asset} historical data')
         st.write(data2)
 
     st.sidebar.title("About")
@@ -100,6 +100,7 @@ def main():
                     'using financial data .\n'
                     'It is maintained by Daniele Grotti \n'
                      '@infomanager')
+
 
 if __name__ == '__main__':
     main()
