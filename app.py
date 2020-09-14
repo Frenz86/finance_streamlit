@@ -46,7 +46,7 @@ def main():
 
     data2 = data[-section:]['Adj Close'].to_frame('Adj Close')
 
-    sma = st.sidebar.checkbox('SMA')
+    sma = st.sidebar.checkbox('SMA',, True)
     if sma:
         period= st.sidebar.slider('SMA period', min_value=5, max_value=500,
                              value=20,  step=1)
@@ -75,12 +75,12 @@ def main():
                     )
     st.plotly_chart(fig2)
 
-    if st.sidebar.checkbox('View statistic'):
+    if st.sidebar.checkbox('View statistic', True):
         st.subheader('Stadistic')
         st.table(data2.describe())
 
     if st.sidebar.checkbox('View quotes'):
-        st.subheader(f'{asset} historical data')
+        st.subheader(f'{asset} historical data', True)
         st.write(data2)
 
     st.sidebar.title("About")
