@@ -14,10 +14,22 @@ def load_quotes(asset):
     return yfinance.download(asset)
 
 
+
 def main():
     components = load_data()
     title = st.empty()
     st.sidebar.title("Options")
+
+
+    st.markdown("""
+    <style>
+    body {
+        color: #fff;
+        background-color: #0A3648;
+    }
+    </style>
+    """, unsafe_allow_html=True) #071433   0A3648
+
 
     def label(symbol):
         a = components.loc[symbol]
@@ -46,7 +58,7 @@ def main():
 
     data2 = data[-section:]['Adj Close'].to_frame('Adj Close')
 
-    sma = st.sidebar.checkbox('SMA',, True)
+    sma = st.sidebar.checkbox('SMA', True)
     if sma:
         period= st.sidebar.slider('SMA period', min_value=5, max_value=500,
                              value=20,  step=1)
