@@ -87,7 +87,7 @@ def main():
     st.plotly_chart(fig2)
 
     if st.sidebar.checkbox('View statistic', True):
-        st.subheader('Stadistic')
+        st.subheader('Statistic')
         st.table(data2.describe())
 
     if st.sidebar.checkbox('View quotes', True):
@@ -98,7 +98,7 @@ def main():
     st.sidebar.info('This app is a simple example of \n '
                     'using financial data .\n'
                     'It is maintained by Daniele Grotti \n'
-                     '@infomanager')
+                     '@Infomanager')
 
 
 if __name__ == '__main__':
